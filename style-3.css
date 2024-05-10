@@ -1,0 +1,27 @@
+body{
+    background-color: #000;
+}
+.loader{
+    transform: rotateX(70deg);
+}
+
+.loader .element{
+    display: block;
+    border-left: 5px solid rgb(19, 3, 250);
+    border-right: 5px solid rgb(6, 2, 253);
+    border-top: dotted 5px rgb(253, 165, 3);
+    width: 10rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    perspective: 1000px;
+    animation: rotate 5s infinite linear;
+    animation-delay: calc(var(--i) * 0.2s);
+    position: relative;
+    left: 40%;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotateY(360deg);
+    }
+}
